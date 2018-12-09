@@ -1,9 +1,22 @@
-<div class="site">
-  <header>
-    <app-header></app-header>
-  </header>
-  <main></main>
-  <footer>
-    <app-footer></app-footer>
-  </footer>
-</div>
+<ng-container>
+  <mat-sidenav-container class="mat-sidenav-container">
+    <mat-sidenav #sidenav mode="push" class="mat-sidenav"
+                 [fixedInViewport]="true">
+      Sidenav
+    </mat-sidenav>
+
+    <mat-sidenav-content class="site">
+      <header>
+        <app-header (toggle)="sidenav.toggle()"></app-header>
+      </header>
+
+      <section class="main">
+        <button mat-button >Toggle</button>
+      </section>
+
+      <footer>
+        <app-footer></app-footer>
+      </footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>
