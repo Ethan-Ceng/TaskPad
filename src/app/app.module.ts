@@ -3,21 +3,24 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {AppRoutingModule} from './app-routing.module';
+
 import {AppComponent} from './app.component';
 import {CoreModule} from './core/core.module';
-import {from} from 'rxjs';
+
+import {LoginModule} from './login/login.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatSidenavModule,
-    CoreModule
+    CoreModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

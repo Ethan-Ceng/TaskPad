@@ -1,15 +1,14 @@
-import {NgModule, SkipSelf, Optional} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {MaterialModule} from '../shared/material.module';
-
-import {HeaderComponent} from './header/header.component';
-import {FooterComponent} from './footer/footer.component';
-import {SidebarComponent} from './sidebar/sidebar.component';
+import { NgModule, SkipSelf, Optional } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../common/material.module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
   ],
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
   exports: [
