@@ -1,8 +1,8 @@
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
-import {NgModule} from '@angular/core';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import { NgModule } from '@angular/core';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -39,7 +39,11 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
+  MatIconRegistry,
 } from '@angular/material';
+
+import { loadSvgResources } from '../utils/svg.util';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @NgModule({
   exports: [
@@ -85,6 +89,13 @@ import {
   ]
 })
 export class MaterialModule {
+  constructor(
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer
+  ) {
+    loadSvgResources(iconRegistry, sanitizer);
+
+  }
 }
 
 

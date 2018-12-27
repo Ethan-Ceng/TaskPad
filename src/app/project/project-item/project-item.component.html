@@ -1,0 +1,15 @@
+<div class="log-box">
+  <mat-card>
+    <mat-card-title> {{item.name}} </mat-card-title>
+    <img [src]="item.coverImg" mat-card-image alt="项目封面">
+    <mat-card-content>
+      
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button> 编辑</button>
+      <button mat-raised-button (click)="onInviteClick()"> 邀请</button>
+      <button mat-raised-button> 删除</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
