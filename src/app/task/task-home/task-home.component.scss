@@ -16,6 +16,8 @@
 
 .list-container {
   flex: 0 0 360px;
+  margin: 10px;
   overflow-x: scroll;
   overflow-y: hidden;
+  border: 1px solid #dcdcdc;
 }

@@ -1,3 +1,24 @@
-<p>
-  task-header works!
-</p>
+<div class="header" matSubheader>
+  <div>
+    <h3>{{title}}</h3>
+  </div>
+
+  <div>
+    <button type="button" mat-button (click)="onNewTaskClick()">
+      <mat-icon>add</mat-icon>
+      <span>新任务</span>
+    </button>
+  </div>
+
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </div>
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item (click)="onEditListClick()"><mat-icon>edit</mat-icon>修改列表名称</button>
+    <button mat-menu-item (click)="onMoveAllClick()"><mat-icon>send</mat-icon>移动所有</button>
+    <button mat-menu-item (click)="onDelListClick()"><mat-icon>delete</mat-icon>删除</button>
+  </mat-menu>
+
+</div>

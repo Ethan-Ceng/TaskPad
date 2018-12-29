@@ -6,9 +6,9 @@
       
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button> 编辑</button>
+      <button mat-raised-button (click)="onEditClick()"> 编辑</button>
       <button mat-raised-button (click)="onInviteClick()"> 邀请</button>
-      <button mat-raised-button> 删除</button>
+      <button mat-raised-button (click)="onDelClick()"> 删除</button>
     </mat-card-actions>
   </mat-card>
 </div>

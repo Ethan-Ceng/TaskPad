@@ -44,6 +44,7 @@ import {
 
 import { loadSvgResources } from '../utils/svg.util';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   exports: [
@@ -86,7 +87,9 @@ import { DomSanitizer } from '@angular/platform-browser';
     MatTooltipModule,
     MatTreeModule,
     ScrollingModule,
-  ]
+  ],
+  entryComponents: [ConfirmDialogComponent],
+  declarations: [ConfirmDialogComponent]
 })
 export class MaterialModule {
   constructor(
