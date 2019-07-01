@@ -1,15 +1,17 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostBinding } from "@angular/core";
 import { MatDialog } from "@angular/material";
 import { NewProjectComponent } from "../new-project/new-project.component";
 import { InviteComponent } from "../invite/invite.component";
 import { ConfirmDialogComponent } from "src/app/common/confirm-dialog/confirm-dialog.component";
 
+
 @Component({
   selector: "app-project-list",
   templateUrl: "./project-list.component.html",
-  styleUrls: ["./project-list.component.scss"]
+  styleUrls: ["./project-list.component.scss"],
 })
 export class ProjectListComponent implements OnInit {
+
   public projects: Array<any> = [
     {
       name: "企业写作平台",

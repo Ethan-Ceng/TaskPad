@@ -1,9 +1,9 @@
-<mat-list-item class="task-item" [ngClass]="{
+<mat-list-item class="task-item" [@item]="widerPriority" [ngClass]="{
   'priority-normal': item.priority === 1,
   'priority-important': item.priority === 2,
   'priority-emergency': item.priority === 3
 }"
-(click)="onItemClick()">
+  (click)="onItemClick()">
   <mat-checkbox class="status" [checked]="item.completed" (click)="onChangBoxClick($event)"></mat-checkbox>
 
   <div class="content" matLine [ngClass]="{'completed': item.completed}">

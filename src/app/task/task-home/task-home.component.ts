@@ -8,7 +8,7 @@ import { NewTaskListComponent } from "../new-task-list/new-task-list.component";
 @Component({
   selector: "app-task-home",
   templateUrl: "./task-home.component.html",
-  styleUrls: ["./task-home.component.scss"]
+  styleUrls: ["./task-home.component.scss"],
 })
 export class TaskHomeComponent implements OnInit {
   lists = [
